@@ -13,3 +13,11 @@ app.get('/metrics', (req, res) => {
 	res.end(prom.register.metrics());
 });
 app.listen(settings.port || 3000);
+
+process.on('SIGTERM', () => {
+	process.exit();
+});
+
+process.on('SIGINT', () => {
+	process.exit();
+});
