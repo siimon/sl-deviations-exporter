@@ -1,6 +1,4 @@
 {
-	"siteIdsAndLines": {
-		"1365": ["4"]
-	},
+	"siteIds": [ "1365" ],
 	"port": 3000
 }

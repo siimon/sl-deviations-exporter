@@ -14,8 +14,7 @@ module.exports = () => {
 
 const poll = () => {
 	console.log('Polling for new deviations');
-	Object.keys(settings.siteIdsAndLines).forEach((siteId) => {
-		const lines = settings.siteIdsAndLines[siteId];
+	settings.siteIds.forEach((siteId) => {
 		const url = `https://api.sl.se/api2/realtimedepartures.json?key=${apiKey}&siteid=${siteId}&timewindow=${timeWindow}`
 
 		const parseResponse = (err, res, body) => {
