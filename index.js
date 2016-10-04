@@ -10,6 +10,7 @@ const poll = require('./poll');
 poll();
 
 app.get('/metrics', (req, res) => {
+	res.header('Content-Type', 'text/plain; charset=utf-8');
 	res.end(prom.register.metrics());
 });
 app.listen(settings.port || 3000);
